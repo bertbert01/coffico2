@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-image: url('images/bg.jpg');
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        .carousel {
+            width: 50%;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 80px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .carousel-item img {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50px;
+            border: 2px solid white;
+            margin-top: 5px;
+        }
+
+        .product-description {
+            display: none;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+        }
+
+        footer a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .coffee-categories {
+            text-align: center;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+
+        .coffee-categories h4 {
+            margin-bottom: 10px;
+        }
+
+        .coffee-categories ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .coffee-categories ul li {
+            display: inline-block;
+            margin-right: 10px;
+            justify-content: space-between;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            width: auto;
+        }
+
+        .dropdown-toggle {
+            border-radius: 50%;
+            padding: 12px;
+            background-color: skyblue;
+            border: none;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-toggle:hover,
+        .dropdown-toggle:active,
+        .dropdown-toggle:focus {
+            background-color: rgb(204, 204, 204) !important;
+        }
+
+        .search-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15px;
+        }
+
+        .mylogo {
+            margin-top: -5px;
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+            margin-right: 0px;
+            cursor: pointer;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .foot {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 2px solid black;
+            border-radius: 100px;
+            margin-bottom: 15px;
+            height: 40px;
+            width: auto;
+        }
+
+        .additional-images {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+            height: auto;
+        }
+
+        .additional-images img {
+            margin-top: 8px;
+            max-width: 100%;
+            margin-bottom: 10px;
+            height: 60px;
+            width: 60px
+        }
+
+        .cat {
+            border: 3px solid white;
+            border-radius: 100%;
+            border-bottom-right-radius: 120px;
+            border-bottom-left-radius: 120px;
+        }
+
+        .text-color {
+            background-color: white;
+            color: black;
+        }
+
+        .oswald-font {
+            background-color: white;
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            padding: 0px 4px 0px 4px;
+            font-style: normal;
+            border-radius: 10px;
+        }
+
+        .bj {
+            height: 50px;
+            width: 90px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 100px;
+            object-fit: cover;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .carousel {
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
+
+        /* Additional styles for the introduction */
+        .intro {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px; /* Adjust margin-top to your preference */
+        }
+
+        .intro h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #383838;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <span class="mylogo" style="float: left; margin-right: 10px;">
+            <a href="login.html"><img src="images/bj.png" alt="Logo" class="bj"></a>
+        </span>
+        <span class="logo-container" style="float: right;">
+            <a href="login.html"><img src="images/login.jpg" alt="Logo" class="logo"></a>
+        </span>
+        <span class="input-group" style="float: right; margin-right: 15px;">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle hidden-arrow" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="images/search.svg" class="search-icon">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" id="productDropdown">
+                    <li>
+                        <div class="input-group mt-0">
+                            <input type="text" id="form12" class="form-control" placeholder="Search">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </header>
+
+    <div style="text-align: center;">
+        <!-- Additional images section -->
+        <div class="additional-images">
+            <a href="espresso.php" style="text-decoration: none; color: black;">
+                <div><img src="images/ristretto.jpg" alt="Additional Image 1" class="cat"></div>
+                <div class="oswald-font">Espresso</div>
+            </a>
+            <a href="cappuccino.php" style="text-decoration: none; color: black;">
+                <div><img src="images/cara.jpg" alt="Additional Image 2" class="cat"></div>
+                <div class="oswald-font">Cappuccino</div>
+            </a>
+            <a href="latte.php" style="text-decoration: none; color: black;">
+                <div><img src="images/hazelnut.jpg" alt="Additional Image 3" class="cat"></div>
+                <div class="oswald-font">Latte</div>
+            </a>
+            <a href="americano.php" style="text-decoration: none; color: black;">
+                <div><img src="images/iced.jpg" alt="Additional Image 4" class="cat"></div>
+                <div class="oswald-font">Americano</div>
+            </a>
+        </div>
+        
+        <!-- Aesthetic introduction -->
+        <div class="intro">
+            <h1>Welcome to B&J’s Coffee Shop</h1>
+            <p>Indulge in the rich aroma and exquisite flavors of our handcrafted coffee blends. Discover a cozy retreat where every sip tells a story and every moment is savored.</p>
+        </div>
+        
+        <a href="product.php">
+            <div id="featured-products-carousel" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/iced.jpg" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/black.jpg" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/vann.jpg" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/cara.jpg" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/ristretto.jpg" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/mocha.jpg" class="d-block">
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <footer style="margin-top: auto; display: flex; justify-content: space-evenly;">
+        <a href="index.html" style="margin-left: 10px;"><img src="images/home.png" alt="Home" style="height: 60px;"
+                class="foot"></a>
+        <a href="product.php"><img src="images/products.png" alt="Products" style="height: 60px;" class="foot"></a>
+        <a href="cart.html"><img src="images/cart.png" alt="Cart" style="height: 60px; width: auto;" class="foot"></a>
+        <a href="contact.html" style="margin-right: 10px;"><img src="images/contacts.png" alt="Contacts"
+                style="height: 60px;" class="foot"></a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
